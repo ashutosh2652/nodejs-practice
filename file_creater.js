@@ -9,7 +9,7 @@ const filecreation = () => {
     rl.question("Enter content of your file:", (content) => {
       fs.writeFile(`${filename}.txt`, content, (err) => {
         if (err) {
-          console.log("Error writing the file.");
+          console.log("Error writing the file:", err);
         } else {
           console.log(`File ${filename}.txt created successfully.`);
         }
